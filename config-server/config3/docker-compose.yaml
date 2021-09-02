@@ -11,4 +11,4 @@ services:
       - cfgsvr3-yh-test:/data/db
 
 volumes:
-  cfgsvr1: {}
+  cfgsvr3-yh-test: {}
