@@ -30,13 +30,13 @@ services:
   #     - shard1svr3:/data/db
 
   shard2svr1:
-  container_name: shard2svr1
-  image: mongo
-  command: mongod --shardsvr --replSet shard2rs --port 27017 --dbpath /data/db
-  ports:
-    - 50004:27017
-  volumes:
-    - shard2svr1:/data/db
+    container_name: shard2svr1
+    image: mongo
+    command: mongod --shardsvr --replSet shard2rs --port 27017 --dbpath /data/db
+    ports:
+      - 50004:27017
+    volumes:
+      - shard2svr1:/data/db
 
   # shard2svr2:
   #   container_name: shard2svr2
