@@ -4,7 +4,7 @@ services:
   cfgsvr1:
     container_name: cfgsvr1-yh-test
     image: mongo
-    command: mongod --configsvr --replSet cfgrs --port 27017 --dbpath /data/db
+    command: mongod --configsvr --replSet cfgrs --port 27017 --dbpath /data/db --keyFile /usr/workspace/mongo-test-yh/docker/config/mongodb-keyfile --auth
     ports:
       - 40001:27017
     volumes:
