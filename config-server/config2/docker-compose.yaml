@@ -3,8 +3,13 @@ version: '3'
 services:
   cfgsvr2:
     container_name: cfgsvr2-yh-test
+<<<<<<< Updated upstream
     image: mongo
     command: mongod --configsvr --replSet cfgrs --port 27017 --dbpath /data/db --keyFile /usr/workspace/mongo-test-yh/docker/config/mongodb-keyfile --auth
+=======
+    image: cfgsvr2-mongo
+    command: mongod --configsvr --replSet cfgrs --port 27017 --dbpath /data/db
+>>>>>>> Stashed changes
     ports:
       - 40002:27017
     volumes:
