@@ -40,8 +40,9 @@ services:
 
   shard2svr2:
     container_name: shard2svr2
-    image: mongo
-    command: mongod --shardsvr --replSet shard2rs --port 27017 --dbpath /data/db
+    image: shard2svr21-mongo
+    #command: mongod --shardsvr --replSet shard2rs --port 27017 --dbpath /data/db
+    command: mongod --shardsvr --replSet shard2rs --port 27017 --dbpath /data/db --keyFile /usr/workspace/mongo-test-yh/docker/config/mongodb-keyfile --auth
     ports:
       - 50005:27017
     volumes:
