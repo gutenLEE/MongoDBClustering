@@ -5,6 +5,6 @@ services:
   mongos:
     container_name: mongos
     image: mongos
-    command: mongos --configdb cfgrs/172.16.40.9:40001,172.16.40.10:40002,172.16.40.11:40003 --bind_ip 0.0.0.0 --port 27017 --keyFile /usr/workspace/mongo-test-yh/docker/config/mongodb-keyfile --auth
+    command: mongos --configdb cfgrs/172.16.40.9:40001,172.16.40.10:40002,172.16.40.11:40003 --bind_ip 0.0.0.0 --port 27017 --keyFile /usr/workspace/mongo-test-yh/docker/config/mongodb-keyfile
     ports:
       - 60000:27017
